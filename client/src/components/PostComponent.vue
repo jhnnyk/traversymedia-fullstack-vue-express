@@ -21,7 +21,7 @@
         <div
           class="created-at"
         >{{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}</div>
-        <button class="delete-button" v-on:click="deletePost(post._id)">x</button>
+        <button class="delete-button" v-on:click="deletePost(post._id)">X</button>
         <p class="text">{{ post.text }}</p>
       </div>
     </div>
@@ -98,8 +98,12 @@ button.delete-button {
   right: 0;
   padding: 5px 15px 5px 15px;
   color: white;
-  background-color: #ff5b5f;
+  background-color: #364a5d;
   cursor: pointer;
+}
+
+button.delete-button:hover {
+  background-color: #ff5b5f;
 }
 
 p.text {
