@@ -17,11 +17,11 @@
         v-bind:item="post"
         v-bind:index="index"
         v-bind:key="post._id"
-        v-on:dblclick="deletePost(post._id)"
       >
         <div
           class="created-at"
         >{{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}</div>
+        <button class="delete-button" v-on:click="deletePost(post._id)">x</button>
         <p class="text">{{ post.text }}</p>
       </div>
     </div>
@@ -90,6 +90,16 @@ div.created-at {
   background-color: darkgreen;
   color: white;
   font-size: 13px;
+}
+
+button.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 15px 5px 15px;
+  color: white;
+  background-color: #ff5b5f;
+  cursor: pointer;
 }
 
 p.text {
